@@ -21,6 +21,11 @@ def student(name):
     return f"Toto je stránka o studentovi {name}."
 
 
+@app.route('/predmet/<int:id>')
+def subject(id):
+    return f"Detail předmětu číslo {id}."
+
+
 @app.route('/soucet/<int:a>/<int:b>')
 def sum_numbers(a, b):
     return f"Součet čísel {a} a {b} je {a + b}."
